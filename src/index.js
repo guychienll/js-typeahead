@@ -85,6 +85,7 @@ function renderForm() {
 }
 
 document.body.appendChild(renderForm());
+document.querySelector("#auto-complete").classList.add("hidden");
 
 const autoCompleteSectionScrollObserver = new IntersectionObserver(
   (entries) => {
