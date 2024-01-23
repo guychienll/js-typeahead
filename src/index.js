@@ -52,18 +52,16 @@ function handleAutoCompleteSelect(e, currentIndex) {
     _currentIndex = isArrowDownKey ? _currentIndex + 1 : _currentIndex - 1;
     e.target.value = autoCompleteSection.children[_currentIndex].textContent;
 
-    Array.from(autoCompleteSection.children)
-        .entries()
-        .forEach(([index, item]) => {
-            const isActive = _currentIndex === index;
-            if (isActive) {
-                item.classList.add('active');
-                autoCompleteSectionScrollObserver.observe(item);
-            } else {
-                item.classList.remove('active');
-                autoCompleteSectionScrollObserver.unobserve(item);
-            }
-        });
+    Array.from(autoCompleteSection.children).forEach((item, index) => {
+        const isActive = _currentIndex === index;
+        if (isActive) {
+            item.classList.add('active');
+            autoCompleteSectionScrollObserver.observe(item);
+        } else {
+            item.classList.remove('active');
+            autoCompleteSectionScrollObserver.unobserve(item);
+        }
+    });
 
     return _currentIndex;
 }
