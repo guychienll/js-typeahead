@@ -1,3 +1,4 @@
+import "./reset.scss";
 import "./styles.scss";
 import { debounce } from "./utils";
 import { getAutoCompleteOptions } from "./api";
@@ -36,13 +37,13 @@ const renderInput = () => {
   autoCompleteSection.id = "auto-complete";
 
   const label = document.createElement("label");
-  label.textContent = "Word";
+  label.textContent = "Fruit";
   label.htmlFor = inputId;
 
   const input = document.createElement("input");
   input.id = inputId;
   input.autocomplete = "off";
-  input.placeholder = "Plz Enter Something";
+  input.placeholder = "Enter a Fruit";
 
   const handleChange = debounce(async function (e) {
     index = -1;
