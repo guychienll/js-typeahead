@@ -1,77 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Rubik Scribble", system-ui;
-  background-color: #eee;
+    font-family: 'Rubik Scribble', system-ui;
+    background-color: #eee;
 }
 
 form {
-  display: flex;
-  margin: 12px;
-  --font-size: 36px;
-  --indent: 18px;
-
-  & > .input-wrapper {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    padding: 0 8px;
-    font-size: var(--font-size);
+    margin: 12px;
+    --font-size: 36px;
+    --indent: 18px;
 
-    & > label {
-      line-height: 1.5;
-      font-size: inherit;
-      background-color: plum;
-      color: #111;
-      padding: 0 var(--indent);
-      border-radius: 8px 8px 0 0;
-    }
+    & > .input-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0 8px;
+        font-size: var(--font-size);
 
-    & > input {
-      height: calc(var(--font-size) * 2.5);
-      padding: 0 var(--indent);
-      font-size: inherit;
-      border: none;
-      outline: none;
-      border-radius: 0 0 8px 8px;
-      letter-spacing: 1.2px;
-    }
-
-    & > #auto-complete {
-      position: absolute;
-      background-color: #eee;
-      width: 100%;
-      max-width: calc(100% - 16px);
-      top: calc((var(--font-size) * 1.5) + calc(var(--font-size) * 2.5) + 10px);
-      left: 8px;
-      list-style: none;
-      max-height: calc(30px * 8);
-      overflow-y: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-      font-size: inherit;
-      padding: 10px 0;
-
-      &.hidden {
-        display: none;
-      }
-
-      & > li {
-        background-color: #eee;
-        padding: 4px var(--indent);
-        cursor: pointer;
-        user-select: none;
-        &.active,
-        &:hover {
-          background-color: gold;
-          padding: 4px var(--indent);
-          color: #111;
+        & > label {
+            line-height: 1.5;
+            font-size: inherit;
+            background-color: plum;
+            color: #111;
+            padding: 0 var(--indent);
+            border-radius: 8px 8px 0 0;
         }
-      }
+
+        & > input {
+            height: calc(var(--font-size) * 2.5);
+            padding: 0 var(--indent);
+            font-size: inherit;
+            border: none;
+            outline: none;
+            border-radius: 0 0 8px 8px;
+            letter-spacing: 1.2px;
+        }
+
+        & > #auto-complete {
+            position: absolute;
+            background-color: #eee;
+            width: 100%;
+            max-width: calc(100% - 16px);
+            top: calc(
+                (var(--font-size) * 1.5) + calc(var(--font-size) * 2.5) + 10px
+            );
+            left: 8px;
+            list-style: none;
+            max-height: calc(30px * 8);
+            overflow-y: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            font-size: inherit;
+            padding: 10px 0;
+
+            &.hidden {
+                display: none;
+            }
+
+            & > li {
+                background-color: #eee;
+                padding: 4px var(--indent);
+                cursor: pointer;
+                user-select: none;
+                &.active,
+                &:hover {
+                    background-color: gold;
+                    padding: 4px var(--indent);
+                    color: #111;
+                }
+            }
+        }
     }
-  }
 }
